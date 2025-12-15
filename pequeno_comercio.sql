@@ -11,7 +11,6 @@ CREATE TABLE CLIENTES
 (
   clientes_id SERIAL PRIMARY KEY,
   nome_cliente VARCHAR(100) NOT NULL,
-  email VARCHAR(100) UNIQUE,
   endereco VARCHAR(200)
 );
 
@@ -64,12 +63,12 @@ INSERT INTO FORNECEDORES (nome_fornecedor, telefone) VALUES
 ('Produtos de Limpeza BR', '67980010004'),
 ('Embalagens Plásticas', '67980010005');
 
-INSERT INTO CLIENTES (nome_cliente, email, endereco) VALUES
-('Ana Clara Souza', 'ana.clara@email.com', 'Rua das Flores, 123'),
-('Bruno Eduardo Lima', 'bruno.lima@email.com', 'Av. Principal, 456'),
-('Carla Denise Oliveira', 'carla.denise@email.com', 'Travessa da Paz, 789'),
-('Daniel Felipe Santos', 'daniel.santos@email.com', 'Estrada Velha, 101'),
-('Erika Gabriela Rocha', 'erika.rocha@email.com', 'Rua Nova, 202');
+INSERT INTO CLIENTES (nome_cliente, endereco) VALUES
+('Ana Clara Souza', 'Rua das Flores, 123'),
+('Bruno Eduardo Lima', 'Av. Principal, 456'),
+('Carla Denise Oliveira', 'Travessa da Paz, 789'),
+('Daniel Felipe Santos', 'Estrada Velha, 101'),
+('Erika Gabriela Rocha', 'Rua Nova, 202');
 
 INSERT INTO PRODUTOS (nome_produto, preco_venda, estoque_quantidade, fornecedor_id) VALUES
 ('Arroz 5kg', 25.50, 50, 1), ('Feijão Preto 1kg', 8.99, 45, 1), ('Macarrão Spaguetti', 5.20, 60, 1), 
