@@ -136,8 +136,6 @@ INNER JOIN
     PRODUTOS PR ON IP.produto_id = PR.produto_id
 INNER JOIN
     FORNECEDORES F ON PR.fornecedor_id = F.fornecedor_id
-WHERE
-    PR.estoque_quantidade > 40
 ORDER BY
     P.data_pedido, C.nome_cliente;
 
@@ -161,7 +159,5 @@ WHERE
     F.nome_fornecedor = 'Distribuidora Alimentos Premium'
 GROUP BY
     C.nome_cliente, F.nome_fornecedor
-HAVING
-    SUM(IP.quantidade * IP.preco_unitario_venda) > 20.00
 ORDER BY
     "Total Gasto" DESC;
